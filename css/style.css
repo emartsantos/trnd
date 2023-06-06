@@ -307,11 +307,15 @@ div#slider figure {
     }
 
     section#hero {
-        max-height: 112vh;
-        height: 112vh;
+        max-height: 120vh;
+        height: 120vh;
         flex-direction: column;
         gap: 4rem;
         justify-content: space-around;
         padding-top: 11rem;
+    }
+    
+    .drop-down.open {
+        height: 170px;
     }
 }
