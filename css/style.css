@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Brolin";
+    src: url(/font/Brolink.otf);
+}
+
+@font-face {
+    font-family: 'Lydian';
+    src: url(/font/lydian.ttf);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #ffff;
+    font-size: 1.2rem;
+}
+
+a:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+header {
+    position: relative;
+    padding: 1rem 2rem;
+    background-color: rgba(65, 65, 65, 0.3);
+    backdrop-filter: blur(7px);
+}
+
+.navbar .logo a{
+    font-family: 'Brolin', sans-serif;
+    font-size: 4rem;
+    text-decoration: none;
+    color: #ffff;
+    transition: all .3s ease-in-out;
+}
+
+.navbar .logo a:hover {
+    color: #9e7632;
+}
+
+section#hero {
+    margin-top: -6.5rem;
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    color: #9e7632;
+    background-color: #d8e9fb;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+    z-index: -999;
+}
+
+body {
+    font-family: 'Lydian', sans-serif;
+    position: relative;
+    z-index: -9999999;
+}
+
+i {
+    color: #9e7632;
+    font-size: 1.1rem;
+    padding: 0 .3rem;
+}
+
+i:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.top-bar {
+    background-color: black;
+    padding: .5rem 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 99999;
+    position: relative;
+}
+
+.contact, .social{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .links a{
+    color: #ffff;
+    font-size: 1.5rem;
+}
+
+.navbar .links a:hover {
+    color: #9e7632;
+}
+
+.social i {
+    font-size: 2rem;
+}
+
+.button {
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    background-color: #9e7632;
+    border-radius: 50px;
+    color: #ffffff;
+    transition: all 0.2 ease-in-out;
+}
+
+.button:hover {
+    color: #ffff;
+    scale: 1.1;
+}
+
+.button:active {
+    scale: 1;
+}
+
+.hamburger {
+    display: none;
+}
+
+.drop-down{
+    display: none;
+    border-radius: 20px;
+    position: absolute;
+    width: 95%;
+    top: 0rem;
+    height: 0;
+    background-color: rgb(58 58 58 / 81%);
+    transition: .2s ease-in-out;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.drop-down.open {
+    height: 240px;
+}
+
+.drop-down li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.container {
+    width: 93%;
+    height: 100%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 5rem;
+    padding: 1rem;
+}
+
+p{
+    padding: 1rem 0 2rem 1rem;
+    font-size: 2rem;
+}
+
+.read-more {
+    font-size: 1.5rem;
+    padding: .5rem 1rem;
+    color: #9e7632;
+    transition: all .3s ease-in-out;
+    border: #9e7632 solid;
+}
+
+.read-more:hover{
+    border: solid orange;
+    cursor: pointer;
+}
+
+.left {
+    animation: myAnimation 5s;
+    position: relative;
+    z-index: 999999;
+}
+
+.right {
+    animation: myAnimation2 5s;
+    position: relative;
+    width: 35%;
+}
+
+div#slider { overflow: hidden; }
+div#slider figure img { width: 20%; float: left; }
+div#slider figure { 
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  top: 0rem;
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite; 
+}
+
+@keyframes slidy {
+    0% { left: 0%; }
+    20% { left: 0%; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+    }
+
+@keyframes myAnimation {
+    from {left:-1000px;}
+    to {left: 0px;}
+}
+
+@keyframes myAnimation2 {
+    from {right:-1000px;}
+    to {right: 0px;}
+}
+
+
+
+/* RESPONSIVE */
+
+
+@media screen and (max-width: 768px)
+{
+    .navbar .links, .navbar .button {
+        display: none;
+    }
+
+    .top-bar, .contact {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .navbar {
+        justify-content: space-between;
+        padding: 0 2.4rem;
+    }
+
+    .button, .hamburger {
+        display: block;
+    }
+
+    header {
+        padding: 0;
+    }
+
+    .drop-down {
+        display: block;
+    }
+
+    section#hero {
+        max-height: 180vh;
+        height: 180vh;
+        flex-direction: column;
+        gap: 4rem;
+        justify-content: center;
+    }
+
+    .right {
+        width: 90%;
+    }
+
+}
