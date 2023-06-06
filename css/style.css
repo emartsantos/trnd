@@ -6,12 +6,12 @@
 
 @font-face {
     font-family: "Brolin";
-    src: url('../font/Brolink.otf');
+    src: url(../font/Brolink.otf);
 }
 
 @font-face {
     font-family: 'Lydian';
-    src: url('../font/lydian.ttf');
+    src: url(../font/lydian.ttf);
 }
 
 li {
@@ -294,4 +294,14 @@ div#slider figure {
         width: 90%;
     }
 
+}
+
+@Media screen and (max-width: 540px){
+    .drop-down {
+        top: 5rem;
+    }
+
+    .navbar .logo a {
+        font-size: 2.5rem;
+    }
 }
