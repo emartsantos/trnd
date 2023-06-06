@@ -304,4 +304,13 @@ div#slider figure {
     .navbar .logo a {
         font-size: 2.5rem;
     }
+
+    section#hero {
+        max-height: 112vh;
+        height: 112vh;
+        flex-direction: column;
+        gap: 4rem;
+        justify-content: space-around;
+        padding-top: 11rem;
+    }
 }
